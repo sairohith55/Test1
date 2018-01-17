@@ -3,7 +3,10 @@
 	<name>UrbanSpoon</name>
 	<comment></comment>
 	<projects>
+		<project>jstl-1.2</project>
 		<project>mysql-connector</project>
+		<project>commons-fileupload-1.2.2</project>
+		<project>commons-io-2.2</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -1,0 +1,172 @@
+#header{
+    height: 10%;
+    width: 100%;
+    background-color: red;
+}
+#body{
+    height: 80%;
+    width: 100%;
+    overflow: scroll;
+}
+#footer{
+    height: 10%;
+    width: 100%;
+    background-color: red;
+}
+#logout{
+    height: 21;
+    width: 154;
+    float: right;
+    margin:1.5%;
+}
+.bodycol{
+    height: 90%;
+    width: 49.5%;
+    border: 2px solid green;
+    float: left;
+    margin: 1px;
+   
+}
+.res_img{
+    height: 85%;
+    width: 98.5%;
+    margin: 3px;
+    position: relative;
+}
+.feed{
+    height: 15%;
+    width: 98.5%;
+
+}
+.img{
+    height: 100%;
+    width: 100%;
+    border : 1px solid;
+    border-radius: 20px;
+     position: absolute;
+}
+ .slide_butn_left{
+    top: 50%;
+    position: relative;
+     cursor: pointer;
+}
+.slide_butn_right{
+     top: 50%;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.rfed{
+    height: 70%;
+    width:25%;
+    float: right;
+    position: relative;
+    margin: 5px;
+}
+.rimg{
+    height: 95%;
+    width: 35%;
+    float: left;
+    position: relative;
+    margin-right: 20px;
+}#popup{
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: red;
+    opacity: 0.5;
+    display: none; 
+}#recipeList{
+    height: 60%;
+    width: 70%;
+    overflow: scroll;
+    position: absolute;
+    background-color: white;
+    display: none;
+    margin: -520px 0px 0px 150px;
+}#close{
+    height: 45px;
+    width: 45px;
+    float: right;
+    position: relative;
+    cursor: pointer;
+}
+#recipeDetails{
+    height:70%;
+    width: 30%;
+     border: 2px solid black;
+    position: relative;
+    float: left;
+    margin: 5px;
+}#recipeDesc{
+    height: 85%;
+    width: 100%;
+}#ratingrecipe{
+    height: 10%;
+    height: 10%;
+    width: 99%;
+    border= 1px solid black;
+}
+.star{
+    height: 100%;
+    width: 30%;
+    position: relative;
+   
+}.si{
+    height: 90%;
+    width: 20%;
+    float: left;
+    position: relative;
+}#recipeImg{
+    height: 60%;
+    width: 100%;
+}#recipeFeed{
+    height: 60%;
+    width: 25%;
+    position: absolute;
+    background-color: white;
+    display: none;
+    margin: -520px 0px 0px 450px; 
+}#addBranch{
+    height: 60%;
+    width: 25%;
+    position: absolute;
+    background-color: white;
+    display: none;
+    margin: -520px 0px 0px 450px; 
+}#addRecipe{
+    height: 50%;
+    width: 23%;
+    background-color: white;
+    display: none;
+    top: 20%;
+    left:40%;
+    position: absolute;
+}#send{
+    height: 10%;
+    width: 30%;
+    background-color: red;
+    opacity: 0.5;
+    color: white;  
+}#userFeed{
+    height: 90%;
+    width:100%;
+    background-color: papayawhip;
+    overflow: scroll;
+}#feed{
+    height: 70%;
+    width: 97%;
+    border: 1px solid black;
+    margin: 5px;
+}#recipeDesc{
+    height:78%;
+    width: 100%;
+    margin-left: 4px;
+}#rating{
+    height: 13%;
+    width: 99.92%;
+    border: 1px solid black;
+    float: left;
+}

@@ -1,0 +1,193 @@
+#header{
+    height: 10%;
+    width: 100%;
+    background-color: red;
+}
+#body{
+    height: 80%;
+    width: 100%;
+}
+#footer{
+    height: 10%;
+    width: 100%;
+    background-color:red;
+}
+#button{
+    height: 20px;;
+    width: 182px;
+    float: right;
+    margin: 1.5%;
+}#b1{
+    cursor: pointer;
+}
+.col{
+    height: 99.6%;
+    width: 49.7%;
+    margin: 1px;
+    float: left;
+    overflow: scroll;
+}
+.Restuarent_title{
+    height: 10%;
+    width: 100%;
+    border: 2px solid yellowgreen;
+    margin-bottom: 4px;
+}
+.branch{
+    height: 87.8%;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.feedback{
+    height: 17%;
+    width: 100%;
+    margin-top:5px;
+}
+.rating{
+    height: 100%;
+    width: 49%;
+    border: 2px solid yellowgreen;
+    float: left;
+}
+.col_recipe{
+    height: 49%;
+    width: 48%;
+    float: left;
+    position: relative;
+    margin-bottom: 10px;
+}
+.branch_images{
+    height: 80%;
+    width:100%;
+    border: 1px solid;
+    margin-bottom: 8px;
+    
+    position: relative;
+}
+.r_logo{
+    width: 15%;
+    height: 100%;
+    float: right;
+}
+.rlogo{
+    height: 100%;
+    width: 100%; 
+}
+ .logo{
+    height: 100%;
+    width: 100%;
+}
+.img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+p{
+    color: red;
+}
+.rtitle{
+    height: 100%;
+    width: 30%;
+    float: left;
+}
+.slide_butn_left{
+    top: 50%;
+    position: relative;
+    cursor: pointer;
+}
+.slide_butn_right{
+     top: 50%;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.more{
+    height: 100%;
+    width:35%;
+    position: relative;
+    float: left;
+}
+.mi{
+    top:25%;
+    height: 50%;
+    width: 50%;
+    float: left;
+    position: absolute;
+}
+.star{
+    height: 100%;
+    width:55%;
+    position: relative;
+    float: right;
+}
+ .si{
+    top:25%;
+    height: 40%;
+    width: 20%;
+    float: left;
+    position: relative;
+}
+.recipe_desc{
+    height: 70%;
+    width: 99%;
+    margin-bottom: 5px;
+    border: 2px solid yellowgreen;
+}
+.reipe-rating{
+     height: 25%;
+    width: 98%;
+    margin: 2px;
+    border: 2px solid yellowgreen;
+    float: left;
+    
+}
+#loginform{
+    width :20%;
+    height: 40%;
+    background-color: cyan;
+    display: none;
+    margin: -500px 0px 0px 500px;
+    position: absolute;
+} #userRegform{
+    width :20%;
+    height: 60%;
+    background-color: cyan;
+    display: none;
+    margin: -500px 0px 0px 500px;
+    position: absolute;
+}#restaurantRegform{
+    width :25%;
+    height: 60%;
+    background-color: cyan;
+    display: none;
+    margin: -500px 0px 0px 500px;
+    position: absolute;
+}
+#close{
+    height: 45px;
+    width: 45px;
+    float: right;
+    position: relative;
+    cursor: pointer;
+}
+#popup{
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    background-color: antiquewhite;
+    position: absolute;
+    display: none;
+}#loginImg{
+    height: 80px;
+    width: 80px;
+}#button2{
+    height: 50px;
+    width: 200px;
+    color: white;
+    background-color: red;
+    font-size: 16px;
+    font-style: oblique;
+    cursor: pointer;
+}

@@ -1,51 +1,100 @@
 package com.ts.urbanspoon.dao;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-
+import java.sql.*;
 import com.ts.urbanspoon.dto.User;
-import com.ts.urbanspoon.exception.UrbanspoonException;
-import com.mysql.jdbc.PreparedStatement;
-import com.ts.urbanspoon.dto.Branch;
-import com.ts.urbanspoon.dto.Restaurant;
 import com.ts.urbanspoon.util.DAOUtility;
- 
- 
 
 public class UserDAO {
-
-	public static User insertUser(User u) throws UrbanspoonException{
+	public static void insert(User user) {
 		Connection con = null;
-		java.sql.PreparedStatement stmt = null;
-		User u1 = new User();
-
+		PreparedStatement pst = null;
 		try {
-			con = DAOUtility.getConncetion();
-			String query = "insert into user values(?,?,?,?,?)";
-			System.out.println("------>query is:" + query);
-			stmt=con.prepareStatement(query);
-			
-			stmt.setString(1, u.getName());
-			stmt.setString(2, u.getGender());
-			stmt.setString(3, u.getEmail());
-			stmt.setString(4, u.getPassword());
-			stmt.setLong(5, u.getMobileNo());
-			if (stmt.executeUpdate() > 0) {
-				u.setId(DAOUtility.getLatestId("user"));
-			}
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			con = DAOUtility.getConnection();
+			pst = con.prepareStatement("insert into user(name,gender,email,password,date_of_birth,mobile_number) values(?,?,?,?,?,?)");
+			pst.setString(1, user.getName());
+			pst.setString(2, user.getGender());
+			pst.setString(3, user.getEmail());
+			pst.setString(4, user.getPassword());
+			pst.setDate(5, (Date) user.getDate());
+			pst.setLong(6,user.getMobileNo());
+			pst.addBatch();
+			if(pst.execute()==false){
+				System.out.println(user.getName()+" registred successfully");
+			}else
+				System.out.println("User registration failed");
+		} catch (Exception e) {
 			e.printStackTrace();
+		}finally {
+			try {
+				con.close();
+				pst.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
 		}
+	}
+	
+	public static User login(int id,String password){
+		Connection con = null;
+		PreparedStatement pst= null;
+		ResultSet rs=null;
+		User user = new User();
+		try {
+			con=DAOUtility.getConnection();
+			pst = con.prepareStatement("select * from user where user_id=? and password=?");
+			pst.setInt(1, id);
+			pst.setString(2, password);
+			pst.addBatch();
+			rs = pst.executeQuery();
+			if(rs.next()){
+				do{
+					user.setId(rs.getInt(1));
+					user.setName(rs.getString(2));
+					user.setEmail(rs.getString(4));
+					user.setMobileNo(rs.getLong(7));
+				}while(rs.next());
+			}else{
+				System.out.println("no user found");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				con.close();
+				pst.close();
+				rs.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return user;
+	}
 
-		
-
-		return u;
-
+	public static User getUser(int id) {
+		Connection con = null;
+		PreparedStatement pst= null;
+		ResultSet rs=null;
+		User user = new User();
+		try {
+			con=DAOUtility.getConnection();
+			pst = con.prepareStatement("select * from user where user_id=?");
+			pst.setInt(1, id);
+			pst.addBatch();
+			rs = pst.executeQuery();
+			if(rs.next()){
+				do{
+					user.setId(rs.getInt(1));
+					user.setName(rs.getString(2));
+					user.setEmail(rs.getString(4));
+					user.setMobileNo(rs.getLong(7));
+				}while(rs.next());
+			}else{
+				System.out.println("no user found");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			DAOUtility.close(con,pst,rs);
+		}
+		return user;
 	}
 }

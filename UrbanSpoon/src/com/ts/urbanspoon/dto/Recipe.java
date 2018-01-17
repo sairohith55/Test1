@@ -3,11 +3,33 @@ package com.ts.urbanspoon.dto;
 public class Recipe {
 private int id;
 private String name;
+private String imageName;
 private String description;
-private boolean veg;
+private int isVeg;
+private float price;
+
+
+public float getPrice() {
+	return price;
+}
+
+
+public void setPrice(float price) {
+	this.price = price;
+}
+
 
 public Recipe() {
-	// TODO Auto-generated constructor stub
+}
+
+
+public String getImageName() {
+	return imageName;
+}
+
+
+public void setImageName(String imageName) {
+	this.imageName = imageName;
 }
 
 public int getId() {
@@ -34,18 +56,19 @@ public void setDescription(String description) {
 	this.description = description;
 }
 
-public boolean isVeg() {
-	return veg;
+public int getIsVeg() {
+	return isVeg;
 }
 
-public void setVeg(boolean veg) {
-	this.veg = veg;
+public void setIsVeg(int isVeg) {
+	this.isVeg = isVeg;
 }
 
 @Override
 public String toString() {
-	return "Recipe [id=" + id + ", name=" + name + ", description=" + description + ", veg=" + veg + "]";
+	return "Recipe [id=" + id + ", name=" + name + ", description=" + description + ", is veg = "+isVeg+" ]";
 }
+
 
 
 	 

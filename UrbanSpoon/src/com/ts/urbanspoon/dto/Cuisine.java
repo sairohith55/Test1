@@ -8,7 +8,6 @@ public class Cuisine {
 	private String country;
 	private List<Recipe> recipesList;
 	
-	
 	public Cuisine() {
 		 
 	}
